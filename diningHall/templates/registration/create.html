@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Create an Account</h2>
+
+<form method="post" action="{% url 'create' %}">
+    {% csrf_token %}
+
+    <label for="student_id">Student ID:</label>
+    <input type="student_id" id="student_id" name="student_id" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="meal_plan">Select Meal Plan:</label>
+    <select id="meal_plan" name="plan" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+
+    <button type="submit">Create</button>
+</form>
+
+{% endblock %}
