@@ -21,7 +21,7 @@
     <table>
         <tr>
             <td>Student ID: </td>
-            <td>{{ form.student_id }}</td>
+            <td>{{ form.username }}</td>
         </tr>
         <tr>
             <td>{{ form.password.label_tag }}</td>
@@ -36,5 +36,7 @@
 <a href="{% url 'create' %}">
     <button type="button">Create Account</button>
 </a>
+
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
