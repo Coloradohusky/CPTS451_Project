@@ -27,6 +27,29 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['rileyjnielsen.pythonanywhere.com']
 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "file": {
+            "level": "DEBUG",  # Capture all logs (DEBUG and above)
+            "class": "logging.FileHandler",
+            "filename": "debug.log",  # Log file path
+            "formatter": "verbose",
+        },
+    },
+    "formatters": {
+        "verbose": {
+            "format": "{asctime} [{levelname}] {name} {message}",
+            "style": "{",
+        },
+    },
+    "root": {
+        "handlers": ["file"],  # Use file handler instead of console
+        "level": "DEBUG",  # Log all levels
+    },
+}
+
 
 # Application definition
 
@@ -38,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_tables2',
 ]
 
 MIDDLEWARE = [
