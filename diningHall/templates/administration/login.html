@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if form.errors %}
-    <p>Your student ID and password didn't match. Please try again.</p>
+    <p>Your username and password didn't match. Please try again.</p>
     <p>{{form.errors}}</p>
 {% endif %}
 
@@ -16,12 +16,12 @@
     {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
+<form method="post" action="{% url 'admin_login' %}">
     {% csrf_token %}
     <table>
         <tr>
-            <td>Student ID: </td>
-            <td>{{ form.student_id }}</td>
+            <td>Admin Username: </td>
+            <td>{{ form.username }}</td>
         </tr>
         <tr>
             <td>{{ form.password.label_tag }}</td>
@@ -32,9 +32,5 @@
     <input type="submit" value="Login">
     <input type="hidden" name="next" value="{{ next }}">
 </form>
-
-<a href="{% url 'create' %}">
-    <button type="button">Create Account</button>
-</a>
 
 {% endblock %}
