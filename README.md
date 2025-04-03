@@ -1,5 +1,5 @@
 # Sprint 2 Report 
-Video Link: 
+Video Link: https://youtube.com/watch?v=kz8ehXwWgLY
 
 Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1?atlOrigin=eyJpIjoiNTlkM2VhN2VjMDA2NDE1Nzk3ODYwODE1ZjA2YTQ5MzAiLCJwIjoiaiJ9
 ## What's New (User Facing)
