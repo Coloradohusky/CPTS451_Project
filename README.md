@@ -12,9 +12,9 @@ Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/proje
  * Students can view all available menus and their items
  * Students can view their current balance
 ## Work Summary (Developer Facing)
-We set up our Django system at https://rileyjnielsen.pythonanywhere.com, updated to the prerelease version 5.2b1 for the use of composite primary keys, and created all the models and the basic views for creating an account and logging in.
+We continued fleshing out the different views, adding an admin dashboard to add and view meals, and add purchase histories. We also gave students the ability to view the menus.
 ## Unfinished Work
-We were unable to finish the entire Admin management system because it is larger than all the other requirments. Currently, admins can view everything they should, however, they can only add items to menus. Eventually, they will be able to edit and remove menu items, as well as edit and remove the active meal plans.
+We were unable to finish the entire Admin management system because it is larger than all the other requirements. Currently, admins can view everything they should, however, they can only add items to menus. Eventually, they will be able to edit and remove menu items, as well as edit and remove the active meal plans.
 ## Completed Issues/User Stories
 Here are links to the issues that we completed in this sprint:
  * [As a student, I want to select a meal plan so I can get access to funds to pay for meals.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-3)
