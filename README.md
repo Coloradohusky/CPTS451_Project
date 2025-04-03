@@ -1,7 +1,7 @@
 # Sprint 2 Report 
 Video Link: 
 
-Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1?atlOrigin=eyJpIjoiNTlkM2VhN2VjMDA2NDE1Nzk3ODYwODE1ZjA2YTQ5MzAiLCJwIjoiaiJ9
+Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1
 ## What's New (User Facing)
  * Students can select from the available meal plans on account creation
  * When creating an account, students can only use unique student IDs that are 8 digits exactly.
@@ -17,23 +17,25 @@ We set up our Django system at https://rileyjnielsen.pythonanywhere.com, updated
 We were unable to finish the entire Admin management system because it is larger than all the other requirments. Currently, admins can view everything they should, however, they can only add items to menus. Eventually, they will be able to edit and remove menu items, as well as edit and remove the active meal plans.
 ## Completed Issues/User Stories
 Here are links to the issues that we completed in this sprint:
- * [Get SQL and DJANGO working](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-12)
- * [Create all tables in SQL](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-13)
- * [As a student, I want to register a student id and password so that I can log into the meal plan service.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-2)
- * [Students should be able to log in](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-18)
+ * [As a student, I want to select a meal plan so I can get access to funds to pay for meals.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-3)
+ * [Bug where students can enter an already used student ID](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-16)
+ * [Need to add restriction so student id in creation is of length 8 and is only numbers](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-17)
+ * [Create an admin login page](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-15)
+ * [Admin needs a way to add items to a student's purchase history](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-20)
+ * [As a student, I want to be able to see each menu item and its nutritional info so I can plan what I want to eat.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-4)
+ * [As a student, I want to be able to access a meal plan tracker so that I can check my remaining balance.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-6)
+ * [As an administrator, I want to be able to track every item purchased so that I can manage usage reports.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-9)
  
 ## Incomplete Issues/User Stories
 Here are links to issues we worked on but did not complete in this sprint:
  
- * [Meal plans selection dropdown is not linked to the actual list of meal plans](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-3)
- * [Should safely error when creating a duplicate student ID](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-16)
- * [Add restriction for student users only](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-17)
+ * [As an administrator, I want to be able to manage the menus, meal plans, and usage reports so that I can keep the meal plan service functioning properly.](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-10)
+
 ## Code Files for Review
 Please review the following code files, which were actively developed during this sprint, for quality:
- * [models.py](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/models.py)
+ * [dashboard.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/administration/dashboard.html)
+ * [nav.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/nav.html)
  * [views.py](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/views.py)
- * [create.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/registration/create.html)
- * [login.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/registration/login.html)
  
 ## Retrospective Summary
 Here's what went well:
