@@ -14,7 +14,7 @@ Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/proje
 ## Work Summary (Developer Facing)
 We set up our Django system at https://rileyjnielsen.pythonanywhere.com, updated to the prerelease version 5.2b1 for the use of composite primary keys, and created all the models and the basic views for creating an account and logging in.
 ## Unfinished Work
-We were unable to finish the implementation of a student picking a meal plan. Currently during account creation, they pick from pre-determined meal plans, but in the future we want them to pick from the meal plans in the meal plan table. We weren't able to get this done due to running out of time. We also have 2 unresolved bugs. First, students can attempt to create an account using an already in use student id, which causes the program to error out. Second, students can input anything as a student id, but it should only be an input of 8 digits. Both of these bugs are unresolved because we ran out of time, and they weren't high on out priority list.
+We were unable to finish the entire Admin management system because it is larger than all the other requirments. Currently, admins can view everything they should, however, they can only add items to menus. Eventually, they will be able to edit and remove menu items, as well as edit and remove the active meal plans.
 ## Completed Issues/User Stories
 Here are links to the issues that we completed in this sprint:
  * [Get SQL and DJANGO working](https://cpts451mealplanmanagement.atlassian.net/browse/MPM-12)
@@ -38,13 +38,11 @@ Please review the following code files, which were actively developed during thi
 ## Retrospective Summary
 Here's what went well:
  * Item 1: We worked collaboratively and helped each other whenever we got stuck.
- * Item 2: We learned how to use DJANGO, which is the building block of our project.
- * Item 3: We also learned how to use a Kanban board, which has helped us stay organized.
- * Item 4: We stay in constant communication so that we can get our work done on time and properly.
+ * Item 2: We learned more HTML so that we could actually interact with our project.
+ * Item 3: We stay in constant communication so that we can get our work done on time and properly.
  
 Here's what we'd like to improve:
  * Item 1: We want to improve the look of our website so that it is more user friendly.
   
 Here are changes we plan to implement in the next sprint:
- * Item 1: We want students to be able to pick from the actual list of meal plans, and not the pre-determined ones we have now
- * Item 2: We want to resolve our student account creation issues.
+ * Item 1: We want everything to be working from both the student and admin standpoints.
