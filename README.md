@@ -36,6 +36,10 @@ Please review the following code files, which were actively developed during thi
  * [dashboard.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/administration/dashboard.html)
  * [nav.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/nav.html)
  * [views.py](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/views.py)
+ * [forms.py](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/forms.py)
+ * [tables.py](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/tables.py)
+ * [balanceHistory.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/student/balanceHistory.html)
+ * [menuDash.html](https://github.com/Coloradohusky/CPTS451_Project/blob/master/diningHall/templates/student/menuDash.html)
  
 ## Retrospective Summary
 Here's what went well:
