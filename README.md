@@ -1,11 +1,16 @@
-# Sprint 1 Report 
+# Sprint 2 Report 
 Video Link: 
-Video Link: https://youtu.be/wq1Qgl1b0ho
 
 Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1?atlOrigin=eyJpIjoiNTlkM2VhN2VjMDA2NDE1Nzk3ODYwODE1ZjA2YTQ5MzAiLCJwIjoiaiJ9
 ## What's New (User Facing)
- * Students can create an account using their student id, pick a meal plan, and set up a password
- * Students can login to their acccount using their student id and password
+ * Students can select from the available meal plans on account creation
+ * When creating an account, students can only use unique student IDs that are 8 digits exactly.
+ * Admins can now login to their own page to manage the system
+ * Admins can add items to menus and view the already created menus
+ * Admins can add items to student purchase histories, which reduces the student balance and updates the usage report
+ * Admins can view the usage report
+ * Students can view all available menus and their items
+ * Students can view their current balance
 ## Work Summary (Developer Facing)
 We set up our Django system at https://rileyjnielsen.pythonanywhere.com, updated to the prerelease version 5.2b1 for the use of composite primary keys, and created all the models and the basic views for creating an account and logging in.
 ## Unfinished Work
