@@ -1,7 +1,7 @@
 # Sprint 2 Report 
 Video Link: 
 
-Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1
+Kanban Link: https://cpts451mealplanmanagement.atlassian.net/jira/software/projects/MPM/boards/1?atlOrigin=eyJpIjoiNTlkM2VhN2VjMDA2NDE1Nzk3ODYwODE1ZjA2YTQ5MzAiLCJwIjoiaiJ9
 ## What's New (User Facing)
  * Students can select from the available meal plans on account creation
  * When creating an account, students can only use unique student IDs that are 8 digits exactly.
