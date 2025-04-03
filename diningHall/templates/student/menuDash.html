@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+
+<title> Menus </title>
+
+<body>
+    {% render_table menu_table %}
+</body>
+
+{% endblock %}

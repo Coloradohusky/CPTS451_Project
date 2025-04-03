@@ -6,7 +6,25 @@
 <title> Menus </title>
 
 <body>
-	{% render_table table %}
+    {% render_table menu_table %}
+    {% render_table purchase_history_table %}
+    {% render_table report_table %}
+
+    <h3>Add Menu Item</h3>
+    <form method="post" action="{% url 'admin_dashboard' %}">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="menu">
+        {{ form.as_p }}
+        <button type="submit">Add Menu Item</button>
+    </form>
+    <h3>Add Purchase History</h3>
+    <form method="post" action="{% url 'admin_dashboard' %}">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="purchase">
+        {{ pform.as_p }}
+        <button type="submit">Add Purchase History</button>
+    </form>
+
 </body>
 
 {% endblock %}

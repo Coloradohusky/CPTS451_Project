@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-info bg-info">
     <div class="container">
-        <a class="navbar-brand text-white" href="#">Navbar</a>
+        <a class="navbar-brand text-white" href="#">Meal System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,10 +8,39 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                {% if user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'admin:index' %}">Admin Dashboard</a>
+                        </li>
+                {% endif %}
+
+                {% if not user.is_staff %}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'student_dashboard' %}">Menus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{% url 'balance_history' %}">Balance/History</a>
+                        </li>
+                {% endif %}
                 <!--<li class="nav-item active">-->
                 <!--</li>-->
                 <!--<li class="nav-item active">-->
                 <!--</li>-->
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <span class="navbar-text text-white">Welcome, {{ user.username }}!</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
