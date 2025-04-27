@@ -23,6 +23,8 @@ class Menu(models.Model):
     item_id = models.CharField("Item Name", max_length = 20)
     info = models.TextField("Nutritional Info")
     cost = models.DecimalField("Cost", max_digits = 6, decimal_places = 2)
+    def __str__(self):
+        return f"{self.item_id} (Menu {self.menu_id})"
 
 class PurchaseHistory(models.Model):
     class Meta:

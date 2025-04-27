@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+
+<title>Admin Usage Reports</title>
+
+<body>
+    {% render_table report_table %}
+
+    <div style="margin-bottom: 20px;">
+        <a href="{% url 'admin_dashboard' %}" style="padding: 10px 20px; background-color: #555; color: white; text-decoration: none; border-radius: 5px; font-size: 18px;">
+            ← Back to Dashboard
+        </a>
+    </div>
+</body>
+
+{% endblock %}

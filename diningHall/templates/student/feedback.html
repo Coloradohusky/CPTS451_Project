@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Give Feedback</h2>
+
+<form method="post" action="{% url 'feedback' %}">
+    {% csrf_token %}
+
+<div>
+    <label for="food_service">Select Feedback Type:</label>
+    <select id="food_service" name="choice" required>
+        <option value="Food">Food</option>
+        <option value="Service">Service</option>
+    </select>
+</div>
+
+<div>
+    <label for="name">Name of Food or Service:</label>
+    <input type="text" id="name" name="name" minlength="1" maxlength="50" required>
+</div>
+
+<div>
+    <label for="rating">Select Rating:</label>
+    <select id="rating" name="rate" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+</div>
+
+<div>
+    <label for="description">Please Give a Brief Description:</label>
+    <input type="text" id="description" name="description" minlength="1" maxlength="100" required>
+</div>
+
+    <button type="submit">Send</button>
+</form>
+
+{% endblock %}

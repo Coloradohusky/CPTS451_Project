@@ -40,3 +40,12 @@ class PurchaseHistoryForm(forms.ModelForm):
         self.fields["student"].queryset = Student.objects.select_related("user").all()
         self.fields["student"].label_from_instance = lambda obj: obj.user.username
 
+class MenuUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Menu
+        fields = ['menu_id', 'item_id', 'info', 'cost']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['menu_id'].disabled = True
+        self.fields['item_id'].disabled = True

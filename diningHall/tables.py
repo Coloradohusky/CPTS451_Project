@@ -1,4 +1,4 @@
-from .models import Menu, PurchaseHistory, Report
+from .models import Menu, PurchaseHistory, Report, Feedback
 
 import django_tables2 as tables
 
@@ -24,4 +24,9 @@ class ReportTable(tables.Table):
         fields = (
             "item_id", "amount"
         )
+        template_name = "django_tables2/semantic.html"
+
+class FeedbackTable(tables.Table):
+    class Meta:
+        model = Feedback
         template_name = "django_tables2/semantic.html"

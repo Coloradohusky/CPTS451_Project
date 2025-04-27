@@ -3,27 +3,72 @@
 
 {% block content %}
 
-<title> Menus </title>
+<title>Admin Dashboard</title>
 
 <body>
-    {% render_table menu_table %}
-    {% render_table purchase_history_table %}
-    {% render_table report_table %}
+    <br/>
+    <div style="display: flex; gap: 20px; margin-bottom: 30px;">
+        <a href="{% url 'admin_menu_table' %}" style="flex:1; text-align: center; padding: 20px; background-color: #CA1237; color: white; text-decoration: none; font-size: 24px; border-radius: 8px;">
+            Menu Items
+        </a>
+        <a href="{% url 'admin_feedback' %}" style="flex:1; text-align: center; padding: 20px; background-color: #4D4D4D; color: white; text-decoration: none; font-size: 24px; border-radius: 8px;">
+            Feedback
+        </a>
+        <a href="{% url 'admin_report_table' %}" style="flex:1; text-align: center; padding: 20px; background-color: #CA1237; color: white; text-decoration: none; font-size: 24px; border-radius: 8px;">
+            Usage Reports
+        </a>
+    </div>
 
-    <h3>Add Menu Item</h3>
-    <form method="post" action="{% url 'admin_dashboard' %}">
-        {% csrf_token %}
-        <input type="hidden" name="form_type" value="menu">
-        {{ form.as_p }}
-        <button type="submit">Add Menu Item</button>
-    </form>
-    <h3>Add Purchase History</h3>
-    <form method="post" action="{% url 'admin_dashboard' %}">
-        {% csrf_token %}
-        <input type="hidden" name="form_type" value="purchase">
-        {{ pform.as_p }}
-        <button type="submit">Add Purchase History</button>
-    </form>
+    <h3>Manage Menu and Purchase History</h3>
+    <br/>
+    <div style="display: flex; gap: 40px;">
+
+        <div style="flex: 1;">
+            <h4>Add Menu Item</h4>
+            <form method="post" action="{% url 'admin_dashboard' %}">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="menu">
+                {{ form.as_p }}
+                <button type="submit">Add Menu Item</button>
+            </form>
+        </div>
+
+        <div style="flex: 1;">
+            <h4>Add Purchase History</h4>
+            <form method="post" action="{% url 'admin_dashboard' %}">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="purchase">
+                {{ pform.as_p }}
+                <button type="submit">Add Purchase History</button>
+            </form>
+        </div>
+
+        <div style="flex: 1;">
+            <h4>Update Menu Item</h4>
+            <form method="post" action="{% url 'admin_dashboard' %}">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="update_menu">
+
+                <label for="menu_item">Select Menu Item:</label>
+                <select name="menu_item" id="menu_item" required>
+                    {% for item in menu_items %}
+                        <option value="{{ item.menu_id }}|{{ item.item_id }}">
+                            {{ item.menu_id }} - {{ item.item_id }}
+                        </option>
+                    {% endfor %}
+                </select>
+
+                <br><br>
+
+                {{ uform.as_p }}
+
+                <button type="submit" name="save">Save Changes</button>
+                <button type="submit" name="delete" formnovalidate style="background-color: red; color: white;">Delete Menu Item</button>
+            </form>
+        </div>
+
+    </div>
+
 
 </body>
 
